@@ -8,9 +8,15 @@ struct ToolScrap{
     }
     
     func getContent() -> String {
-        let url = URL(string: self.link)!
-        let htmlInString = try! String(contentsOf: url)
-        return htmlInString
+        do{
+            let url = URL(string: self.link)!
+            let htmlInString = try String(contentsOf: url)
+            return htmlInString
+        }catch {
+            print(error)
+            return ""
+        }
+
     }
     
     func getHtml() -> Element{
