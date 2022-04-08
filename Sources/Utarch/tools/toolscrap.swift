@@ -20,7 +20,12 @@ struct ToolScrap{
     }
     
     func getHtml() -> Element{
-        let dom = try! SwiftSoup.parse(self.getContent())
-        return dom
+        do{
+            let dom = try SwiftSoup.parse(self.getContent())
+            return dom
+        } catch {
+            print(error)
+            return Element(Tag(""), "")
+        }
     }
 }
