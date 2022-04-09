@@ -102,6 +102,26 @@ struct RobotScrap {
             print(error)
         }
     }
+    
+    private getNamesParentsParagraphs(paragraphsTags:[Element]) -> [String] throws {
+        do{
+            var namesParentsOfParagraphsTags: [String] = []
+            
+            for tag in paragraphsTags{
+                let parentClassName = try tag.parents().first()!.className()
+                namesParentsOfParagraphsTags.append(parentClassName)
+            }
+            return namesParentsOfParagraphsTags
+            
+        } catch{
+            print(error)
+        }
+    }
+
+    
+    
+    
+    
 }
 
 
