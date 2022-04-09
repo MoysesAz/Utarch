@@ -90,6 +90,18 @@ struct RobotScrap {
 
         }
     }
+    
+    
+
+    private getParagraphs() -> [Element] throws {
+        let dom = self.dom
+        do {
+            let paragraphsTags:[Element] = try dom.getElementsByTag("p").array()
+            return paragraphsTags
+        } catch{
+            print(error)
+        }
+    }
 }
 
 
