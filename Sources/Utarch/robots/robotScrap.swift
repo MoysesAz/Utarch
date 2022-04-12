@@ -134,7 +134,7 @@ struct RobotScrap {
                 chosenClass = className
             }
         }
-        return 
+        return chosenClass
     }
     
     
