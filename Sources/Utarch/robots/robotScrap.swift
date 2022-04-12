@@ -93,7 +93,7 @@ struct RobotScrap {
     
     
 
-    private getParagraphs() -> [Element] throws {
+    private func getParagraphs() throws -> [Element] {
         let dom = self.dom
         do {
             let paragraphsTags:[Element] = try dom.getElementsByTag("p").array()
