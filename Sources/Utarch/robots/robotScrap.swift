@@ -103,7 +103,7 @@ struct RobotScrap {
         }
     }
     
-    private getNamesParentsParagraphs(paragraphsTags:[Element]) -> [String] throws {
+    private func getNamesParentsParagraphs(paragraphsTags:[Element]) throws-> [String]  {
         do{
             var namesParentsOfParagraphsTags: [String] = []
             
