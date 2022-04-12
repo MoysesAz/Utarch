@@ -117,7 +117,27 @@ struct RobotScrap {
             print(error)
         }
     }
-
+    
+    private getCounts(parentOfParagraphs: [Element]) -> [Element]{
+        var counts: [Element: Int] = [:]
+        
+        for item in parentOfParagraphs {
+            counts[item] = (counts[item] ?? 0) + 1
+        }
+        
+        var accountant: Int = 0
+        var chosenClass: Element = Element(Tag(""), "")
+        
+        for (className, numberTags) in counts{
+            if(numberTags > accountant ){
+                accountant = numberTags
+                chosenClass = className
+            }
+        }
+        return 
+    }
+    
+    
     
     
     
