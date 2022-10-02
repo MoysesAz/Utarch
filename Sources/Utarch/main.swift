@@ -15,15 +15,12 @@ func Main(){
         ████████▀     ▄████▀     ███    █▀    ███    ███ ████████▀    ███    █▀
                                               ███    ███
     ==================================================================================
-    
-    
-    
+
     """
     print(logo)
-    print("Digite um assunto: ")
+    print("Digite um assunto (ou digite exit para sair): ")
     let input = readLine()!
     if input != ""{
-        
         
         if input == "exit"{
             
