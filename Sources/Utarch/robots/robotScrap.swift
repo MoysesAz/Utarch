@@ -38,7 +38,6 @@ struct RobotScrap {
             counts[item] = (counts[item] ?? 0) + 1
         }
         
-        
         var accountant: Int = 0
         var chosenClass: Element = Element(Tag(""), "")
         
@@ -48,7 +47,6 @@ struct RobotScrap {
                 chosenClass = className
             }
         }
-        
         
         for childTag in chosenClass.children(){
             let childTagName = childTag.tagName()
@@ -70,7 +68,7 @@ struct RobotScrap {
             }else{
                 switch childTagName{
                 case "p":
-                        print("    ", text)
+                    print("    ", text)
                 
                 case "h1":
                     print("-", text)
@@ -78,16 +76,13 @@ struct RobotScrap {
                 case "h2":
                     print("-", text)
                 
-                
                 case "h3":
                     print("-", text)
                     
                 default:
                     continue
                 }
-                
             }
-
         }
     }
 }

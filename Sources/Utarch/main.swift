@@ -21,13 +21,11 @@ func Main(){
     print("Digite um assunto (ou digite exit para sair): ")
     let input = readLine()!
     if input != ""{
-        
         if input == "exit"{
-            
+            return
         }
         else{
             let google = robotGoogleSearch(input).getLinks()
-            
             for link in google{
                     RobotScrap(link: link).getImportantText()
                     RobotScrap(link: link).getImportantText()
@@ -40,10 +38,8 @@ func Main(){
     }
     else{
         return Main()
-    
     }
 }
-
 
 Main()
 
