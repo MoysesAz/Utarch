@@ -18,7 +18,7 @@ func Main(){
 
     """
     print(logo)
-    print("Digite um assunto (ou digite exit para sair): ")
+    print("Enter a subject (or type exit to exit): ")
     let input = readLine()!
     if input != ""{
         if input == "exit"{
