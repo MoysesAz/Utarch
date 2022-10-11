@@ -19,7 +19,7 @@ func Main(){
     """
     print(logo)
     print("Enter a subject (or type exit to exit): ")
-    let input = readLine()!
+    let input = readLine() ?? ""
     if input != ""{
         if input == "exit"{
             return
